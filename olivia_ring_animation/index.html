@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Yanis El Yassiri</title>
+    <link rel="icon" type="image/webp" href="../assets/logo.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.6.0/remixicon.css">
+    <link rel="stylesheet" href="..//assets/css/swap.css">
+    <link rel="stylesheet" href="..//assets/css/boostrap.min.css">
+    <link rel="stylesheet" href="..//assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="..//assets/css/slick.css">
+    <link rel="stylesheet" href="..//assets/css/style.css">
+    <link rel="stylesheet" href="..//assets/css/media_query.css">
+</head>
+
+<body>
+    <!-- ====================================== Preloader ===================================== -->
+    <div class="wrapper">
+        <div id="loader-wrapper">
+            <div id="loader">
+                <svg viewBox="0 0 1320 300">
+                    <text x="50%" y="50%" dy=".35em" text-anchor="middle">Yanis El Yassiri</text>
+                </svg>
+            </div>
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+        </div>
+    </div>
+    <!-- ====================================== Preloader End ===================================== -->
+
+    <!-- ====================================== Background Animation ===================================== -->
+    <canvas id="test"></canvas>
+    <!-- ====================================== Background Animation End ===================================== -->
+
+    <!-- ====================================== Cursor ===================================== -->
+    <div class="cursor"></div>
+    <!-- ====================================== Cursor End ===================================== -->
+
+    <!-- ====================================== Dark Light Mode ===================================== -->
+    <div class="dark_toggle">
+        <div class="ul-header">
+            <a class="mode" onclick="myFunction()" title="Toggle Mode">
+                <div class="icon-container">
+                    <i id="sunIcon" class="fa-solid fa-sun fa-spin icon"></i>
+                    <i id="moonIcon" class="fa-solid fa-moon icon hidden"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- ====================================== Dark Light Mode End===================================== -->
+
+    <header>
+        <!-- ====================================== Fix Icon Menu ===================================== -->
+        <div class="sidebar close">
+            <ul class="nav-links icetab-container" id="icetab-container">
+                <li class="icetab current-tab">
+                    <a class="nav_menu_icon_line" href="javascript:void(0)">
+                        <img class="nav_menu_icon" src="../assets/images/home_icon.svg" alt="home_icon">
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="javascript:void(0)">Home</a></li>
+                    </ul>
+                </li>
+                <li class="icetab menu-btn">
+                    <a class="nav_menu_icon_line" href="javascript:void(0)">
+                        <img class="nav_menu_icon" src="../assets/images/portfolio_icon.svg" alt="portfolio_icon">
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a class="link_name" href="javascript:void(0)">Portfolio</a></li>
+                    </ul>
+                </li>
+                <li class="icetab">
+                    <a class="nav_menu_icon_line" href="javascript:void(0)">
+                        <img class="nav_menu_icon" src="../assets/images/about_icon.svg" alt="about_icon">
+                    </a>
+                    <ul class="sub-menu">
+                        <li><a class="link_name" href="javascript:void(0)">About</a></li>
+                    </ul>
+                </li>
+                <li class="icetab">
+                    <a class="nav_menu_icon_line" href="javascript:void(0)">
+                        <img class="nav_menu_icon" src="../assets/images/resume_icon.svg" alt="resume_icon">
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="javascript:void(0)">Resume</a></li>
+                    </ul>
+                </li>
+                <li class="icetab">
+                    <a class="nav_menu_icon_line" href="javascript:void(0)">
+                        <img class="nav_menu_icon" src="../assets/images/skills_icon.svg" alt="skills_icon">
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="javascript:void(0)">Skills</a></li>
+                    </ul>
+                </li>
+                <li class="icetab">
+                    <a href="javascript:void(0)">
+                        <img class="nav_menu_icon" src="../assets/images/contact_icon.svg" alt="contact_icon">
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="javascript:void(0)">Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- ====================================== Fix Icon Menu End ===================================== -->
+
+        <!-- ======================================= Side Menu ================================== -->
+        <div class="toggle" onclick="openNav()">
+            <img class="line-menu" src="../assets/images/line-menu.png" alt="line-menu">
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <div class="closebtn" onclick="closeNav()">&times;</div>
+            <img class="logo" src="../assets/logo.webp" alt="yanis-logo">
+            <ul class="sidescreen_sub icetab-container" id="icetab-container2">
+                <li class="icetab current-tab" onclick="openNav()">
+                    <a class="icons2" href="javascript:void(0)">
+                        <img class="nav_menu_icon sidenav_img" src="../assets/images/home_icon.svg" alt="home_icon">Home
+                    </a>
+                </li>
+                <li class="icetab" onclick="openNav()">
+                    <a class="icons2" href="javascript:void(0)">
+                        <img class="nav_menu_icon sidenav_img" src="../assets/images/portfolio_icon.svg" alt="portfolio_icon">Portfolio
+                    </a>
+                </li>
+                <li class="icetab" onclick="openNav()">
+                    <a class="icons2" href="javascript:void(0)">
+                        <img class="nav_menu_icon sidenav_img" src="../assets/images/about_icon.svg" alt="about_icon">About
+                    </a>
+                </li>
+                <li class="icetab" onclick="openNav()">
+                    <a class="icons2" href="javascript:void(0)">
+                        <img class="nav_menu_icon sidenav_img" src="../assets/images/resume_icon.svg" alt="resume_icon">Resume
+                    </a>
+                </li>
+                <li class="icetab" onclick="openNav()">
+                    <a class="icons2" href="javascript:void(0)">
+                        <img class="nav_menu_icon sidenav_img" src="../assets/images/skills_icon.svg" alt="skills_icon">Skills
+                    </a>
+                </li>
+                <li class="icetab" onclick="openNav()">
+                    <a class="icons2" href="javascript:void(0)">
+                        <img class="nav_menu_icon sidenav_img" src="../assets/images/contact_icon.svg" alt="contact_icon">Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- ======================================= Side Menu End ================================== -->
+    </header>
+
+    <div class="all_page" id="page">
+        <section class="card_section" id="card_main">
+            <div class="olivia_bio" id="oliva_details">
+                <div class="imgBox">
+                    <img class="olivia-img" src="../assets/logo.webp" alt="profile-image">
+                </div>
+                <div class="bio_contain">
+                    <h1 class="olivia_moswa">Yanis El Yassiri</h1>
+                    <h2 class="designer font_w_font_s1 overflow-hidden"></h2>
+                    <button class="download_cv hire_me font_w_font_s">
+                        <i class="ri-at-line"></i> Hire Me
+                    </button>
+                </div>
+            </div>
+
+            <div class="right_card_main icetab-content" id="icetab-content">
+                <!-- ======================================= Home Section ================================== -->
+                <section class="oliva-intro tabcontent tab-active" id="home">
+                    <div class="intro_main">
+                        <h2 class="intro font_w_font_s fade_up">intro</h2>
+                    </div>
+                    <h2 class="moswa font_w_font_s fade_up">Hi, I'm Yanis El Yassiri - CTO & Applied AI Developer</h2>
+                    <h3 class="passionate font_w_font_s1 fade_up">
+                        I design and ship production-ready AI systems, from LLM-based assistants to end-to-end software
+                        platforms. I focus on pragmatic architecture, reliable delivery, and measurable impact across
+                        education, SaaS, and automation projects.
+                    </h3>
+                    <div class="button_circle_group">
+                        <div>
+                            <button class="download_cv font_w_font_s" onClick="window.open('../assets/pdf/yanis-el-yassiri-cv.pdf');">
+                                <i class="ri-download-cloud-2-line"></i>Download CV
+                            </button>
+                        </div>
+                        <div class="circular_text_main">
+                            <a href="javascript:void(0)" class="down_arrow_main position-relative">
+                                <img class="circular_text" src="../assets/images/circular_text.png" alt="circular_text">
+                                <img class="down_arrow" src="../assets/images/down_arrow.svg" alt="down_arrow">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <!-- ======================================= Home Section End ================================== -->
+
+                <!-- ======================================= Portfolio Section ================================== -->
+                <section class="oliva-intro tabcontent" id="portfolio">
+                    <div class="intro_main">
+                        <h2 class="intro font_w_font_s fade_up">portfolio</h2>
+                    </div>
+                    <h2 class="moswa font_w_font_s fade_up">Selected Projects Delivered</h2>
+                    <h3 class="passionate font_w_font_s1 fade_up">
+                        Projects migrated from my previous portfolio, including complete image sets and video demos.
+                    </h3>
+
+                    <div class="content_main">
+                        <div class="fade_up portfolio_project_card">
+                            <div class="content_portfolio">
+                                <div class="content-overlay"></div>
+                                <img class="content-image" src="../assets/images/Yoovi/preview.png" alt="yoovi-cover">
+                                <div class="content-details fadeIn-bottom">
+                                    <h3 class="content-title">Yoovi</h3>
+                                    <p class="content-text">AI EdTech Platform</p>
+                                </div>
+                            </div>
+                            <h4 class="project_name font_w_font_s">Yoovi</h4>
+                            <p class="project_name_sub font_w_font_s1">AI EdTech Platform</p>
+                            <div class="project_media_actions">
+                                <button type="button" class="download_cv project_action_btn view-project-btn" data-target="project-yoovi-modal">
+                                    View the project
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="fade_up portfolio_project_card">
+                            <div class="content_portfolio">
+                                <div class="content-overlay"></div>
+                                <img class="content-image" src="../assets/images/projects/leadem/carousel/leadem-01.png" alt="leadem-cover">
+                                <div class="content-details fadeIn-bottom">
+                                    <h3 class="content-title">Lead'Em</h3>
+                                    <p class="content-text">AI Phone Prospecting</p>
+                                </div>
+                            </div>
+                            <h4 class="project_name font_w_font_s">Lead'Em</h4>
+                            <p class="project_name_sub font_w_font_s1">AI Phone Prospecting</p>
+                            <div class="project_media_actions">
+                                <button type="button" class="download_cv project_action_btn view-project-btn" data-target="project-leadem-modal">
+                                    View the project
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="fade_up portfolio_project_card">
+                            <div class="content_portfolio">
+                                <div class="content-overlay"></div>
+                                <img class="content-image" src="../assets/images/projects/nefsy/carousel/nefsy-01.png" alt="nefsy-cover">
+                                <div class="content-details fadeIn-bottom">
+                                    <h3 class="content-title">Nefsy</h3>
+                                    <p class="content-text">Pilgrim & Guide App</p>
+                                </div>
+                            </div>
+                            <h4 class="project_name font_w_font_s">Nefsy</h4>
+                            <p class="project_name_sub font_w_font_s1">Pilgrim & Guide App</p>
+                            <div class="project_media_actions">
+                                <button type="button" class="download_cv project_action_btn view-project-btn" data-target="project-nefsy-modal">
+                                    View the project
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="fade_up portfolio_project_card">
+                            <div class="content_portfolio">
+                                <div class="content-overlay"></div>
+                                <img class="content-image" src="../assets/images/projects/childs-kitchen/carousel/childs-kitchen-01.png" alt="childs-kitchen-cover">
+                                <div class="content-details fadeIn-bottom">
+                                    <h3 class="content-title">Child's Kitchen</h3>
+                                    <p class="content-text">School Catering Platform</p>
+                                </div>
+                            </div>
+                            <h4 class="project_name font_w_font_s">Child's Kitchen</h4>
+                            <p class="project_name_sub font_w_font_s1">School Catering Platform</p>
+                            <div class="project_media_actions">
+                                <button type="button" class="download_cv project_action_btn view-project-btn" data-target="project-childs-kitchen-modal">
+                                    View the project
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="fade_up portfolio_project_card">
+                            <div class="content_portfolio">
+                                <div class="content-overlay"></div>
+                                <img class="content-image" src="../assets/images/projects/jedeeshop/cover.webp" alt="jedeeshop-cover">
+                                <div class="content-details fadeIn-bottom">
+                                    <h3 class="content-title">Jedeeshop</h3>
+                                    <p class="content-text">E-commerce Concept</p>
+                                </div>
+                            </div>
+                            <h4 class="project_name font_w_font_s">Jedeeshop</h4>
+                            <p class="project_name_sub font_w_font_s1">E-commerce Concept</p>
+                            <div class="project_media_actions">
+                                <button type="button" class="download_cv project_action_btn view-project-btn" data-target="project-jedeeshop-modal">
+                                    View the project
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="fade_up portfolio_project_card">
+                            <div class="content_portfolio">
+                                <div class="content-overlay"></div>
+                                <img class="content-image" src="../assets/images/projects/awa-plaisir/cover.webp" alt="awa-plaisir-cover">
+                                <div class="content-details fadeIn-bottom">
+                                    <h3 class="content-title">Awa Plaisir</h3>
+                                    <p class="content-text">Furniture E-commerce</p>
+                                </div>
+                            </div>
+                            <h4 class="project_name font_w_font_s">Awa Plaisir</h4>
+                            <p class="project_name_sub font_w_font_s1">Furniture E-commerce</p>
+                            <div class="project_media_actions">
+                                <button type="button" class="download_cv project_action_btn view-project-btn" data-target="project-awa-plaisir-modal">
+                                    View the project
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="fade_up portfolio_project_card">
+                            <div class="content_portfolio">
+                                <div class="content-overlay"></div>
+                                <img class="content-image" src="../assets/images/projects/kovering-agency/cover.webp" alt="kovering-agency-cover">
+                                <div class="content-details fadeIn-bottom">
+                                    <h3 class="content-title">Kovering Agency</h3>
+                                    <p class="content-text">Agency Website</p>
+                                </div>
+                            </div>
+                            <h4 class="project_name font_w_font_s">Kovering Agency</h4>
+                            <p class="project_name_sub font_w_font_s1">Agency Website</p>
+                            <div class="project_media_actions">
+                                <button type="button" class="download_cv project_action_btn view-project-btn" data-target="project-kovering-agency-modal">
+                                    View the project
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="fade_up portfolio_project_card">
+                            <div class="content_portfolio">
+                                <div class="content-overlay"></div>
+                                <img class="content-image" src="../assets/images/projects/chicken-maestro/cover.webp" alt="chicken-maestro-cover">
+                                <div class="content-details fadeIn-bottom">
+                                    <h3 class="content-title">Chicken Maestro</h3>
+                                    <p class="content-text">Restaurant Delivery Platform</p>
+                                </div>
+                            </div>
+                            <h4 class="project_name font_w_font_s">Chicken Maestro</h4>
+                            <p class="project_name_sub font_w_font_s1">Restaurant Delivery Platform</p>
+                            <div class="project_media_actions">
+                                <button type="button" class="download_cv project_action_btn view-project-btn" data-target="project-chicken-maestro-modal">
+                                    View the project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ======================================= Portfolio Section End ================================== -->
+
+                <!-- ======================================= About Section ================================== -->
+                <section class="oliva-intro tabcontent" id="about">
+                    <div class="intro_main">
+                        <h2 class="intro font_w_font_s fade_up">about me</h2>
+                    </div>
+                    <h2 class="moswa font_w_font_s fade_up">AI Systems, Product Thinking, and Real-World Delivery</h2>
+                    <h3 class="passionate font_w_font_s1 fade_up">
+                        I am a 22-year-old French self-taught developer, French from Paris, with a strong ability to learn
+                        quickly, adapt fast, and deliver autonomously. My work centers on AI system architecture, LLM APIs,
+                        multi-agent orchestration, RAG pipelines, long-term personalization, and full-stack product
+                        execution. I am seeking a long-term role in Malaysia where I can contribute to a high-impact EdTech
+                        or AI product.
+                    </h3>
+                    <div class="about_counter fade_up">
+                        <div class="counter">
+                            <h3 class="counter2 count font_w_font_s" data-count="4">4+</h3>
+                            <h3 class="experince font_w_font_s1">YEARS OF EXPERIENCE</h3>
+                        </div>
+                        <div class="counter">
+                            <h3 class="counter2 count font_w_font_s" data-count="10">10+</h3>
+                            <h3 class="experince">PROJECTS DELIVERED</h3>
+                        </div>
+                    </div>
+                </section>
+                <!-- ======================================= About Section End ================================== -->
+
+                <!-- ======================================= Resume Section ================================== -->
+                <section class="oliva-intro tabcontent" id="resume">
+                    <div class="intro_main">
+                        <h2 class="intro font_w_font_s fade_up">resume</h2>
+                    </div>
+                    <h2 class="moswa font_w_font_s fade_up">Education</h2>
+                    <h3 class="passionate font_w_font_s1 fade_up">
+                        Academic foundation in science, mathematics, and computer science, followed by self-directed
+                        specialization in AI engineering and software product development.
+                    </h3>
+
+                    <div class="education position-relative education_space">
+                        <div class="side_circle_ring fade_up">
+                            <div class="small_yellow_border">
+                                <div class="small_yellow_circle"></div>
+                            </div>
+                        </div>
+                        <div class="small_yellow_border_main fade_up">
+                            <h3 class="bachelor font_w_font_s1">Scientific Baccalaureate (Mathematics & Physics-Chemistry)</h3>
+                            <h4 class="university font_w_font_s1">France / 2020 - 2021</h4>
+                            <h5 class="cursus font_w_font_s1">
+                                Built strong analytical and scientific fundamentals that support advanced engineering,
+                                reasoning, and system design decisions.
+                            </h5>
+                        </div>
+                    </div>
+
+                    <div class="education position-relative">
+                        <div class="side_circle_ring fade_up">
+                            <div class="small_yellow_border">
+                                <div class="small_yellow_circle"></div>
+                            </div>
+                        </div>
+                        <div class="small_yellow_border_main fade_up">
+                            <h3 class="bachelor font_w_font_s1">BSc Mathematics & Computer Science (1 Year)</h3>
+                            <h4 class="university font_w_font_s1">Universite Sorbonne Paris Nord, Paris / 2021 - 2022</h4>
+                            <h5 class="cursus font_w_font_s1">
+                                Completed one year, then voluntarily discontinued to pursue entrepreneurial projects and
+                                self-directed learning with faster real-world application.
+                            </h5>
+                        </div>
+                    </div>
+
+                    <h2 class="moswa experience_main_text font_w_font_s fade_up">Experience</h2>
+                    <h3 class="passionate font_w_font_s1 fade_up">
+                        Product-focused engineering experience across AI platforms, SaaS systems, and public-interest
+                        initiatives with end-to-end ownership from architecture to deployment.
+                    </h3>
+
+                    <div class="education position-relative education_space">
+                        <div class="side_circle_ring fade_up">
+                            <div class="small_yellow_border">
+                                <div class="small_yellow_circle"></div>
+                            </div>
+                        </div>
+                        <div class="small_yellow_border_main fade_up">
+                            <div class="envato_group_main">
+                                <div>
+                                    <h3 class="bachelor font_w_font_s1">CTO & Applied AI Developer</h3>
+                                    <h4 class="company font_w_font_s1">Yoovi / 2023 - Present</h4>
+                                </div>
+                            </div>
+                            <h5 class="cursus font_w_font_s1">
+                                Founder and technical lead of an AI-powered educational platform live and used by
+                                students and schools, with a focus on LLM architecture, RAG, and personalization.
+                            </h5>
+                        </div>
+                    </div>
+
+                    <div class="education position-relative">
+                        <div class="side_circle_ring fade_up">
+                            <div class="small_yellow_border">
+                                <div class="small_yellow_circle"></div>
+                            </div>
+                        </div>
+                        <div class="small_yellow_border_main fade_up">
+                            <div class="envato_group_main">
+                                <div>
+                                    <h3 class="bachelor font_w_font_s1">Freelance Software Developer</h3>
+                                    <h4 class="company font_w_font_s1">AI, SaaS, and Public-Interest Projects / 2023 - Present</h4>
+                                </div>
+                            </div>
+                            <h5 class="cursus font_w_font_s1">
+                                - Worked on around ten projects, with about half focused on AI.<br>
+                                - Educational statistical analytics on more than 200,000 students.<br>
+                                - AI phone prospecting systems.<br>
+                                - A Quran learning application with AI-based error correction.<br>
+                                - Additional projects in restaurant platforms, delivery management, and online ordering.<br>
+                                - Furniture platforms with courier operations, 3D product rendering, and augmented reality to visualize products at home.<br>
+                                - And much more.
+                            </h5>
+                        </div>
+                    </div>
+                </section>
+                <!-- ======================================= Resume Section End ================================== -->
+
+                <!-- ======================================= Skills Section ================================== -->
+                <section class="oliva-intro tabcontent" id="skill">
+                    <div class="intro_main">
+                        <h2 class="intro font_w_font_s fade_up">my skills</h2>
+                    </div>
+                    <h2 class="moswa font_w_font_s fade_up">Core AI and Software Skills</h2>
+                    <h3 class="passionate font_w_font_s1">
+                        Practical expertise across applied AI architecture, modern web engineering, and deployment-ready
+                        product delivery.
+                    </h3>
+
+                    <h3 class="lan_skill font_w_font_s fade_up">Skills</h3>
+                    <div class="skill_circle_main">
+                        <div class="skill_circle fade_up">
+                            <div class="hard_skill_group">
+                                <img class="figma" src="https://cdn.simpleicons.org/typescript/3178C6" alt="typescript">
+                            </div>
+                            <h4 class="subject font_w_font_s1">TypeScript</h4>
+                        </div>
+                        <div class="skill_circle fade_up">
+                            <div class="hard_skill_group">
+                                <img class="figma" src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="javascript">
+                            </div>
+                            <h4 class="subject font_w_font_s1">JavaScript</h4>
+                        </div>
+                        <div class="skill_circle fade_up">
+                            <div class="hard_skill_group">
+                                <img class="figma" src="https://cdn.simpleicons.org/python/3776AB" alt="python">
+                            </div>
+                            <h4 class="subject font_w_font_s1">Python</h4>
+                        </div>
+                        <div class="skill_circle fade_up">
+                            <div class="hard_skill_group">
+                                <img class="figma" src="https://cdn.simpleicons.org/react/61DAFB" alt="react">
+                            </div>
+                            <h4 class="subject font_w_font_s1">React</h4>
+                        </div>
+                        <div class="skill_circle fade_up">
+                            <div class="hard_skill_group">
+                                <img class="figma" src="https://cdn.simpleicons.org/nodedotjs/5FA04E" alt="nodejs">
+                            </div>
+                            <h4 class="subject font_w_font_s1">Node.js</h4>
+                        </div>
+                        <div class="skill_circle fade_up">
+                            <div class="hard_skill_group">
+                                <img class="figma" src="https://cdn.simpleicons.org/langchain/1C3C3C" alt="langchain">
+                            </div>
+                            <h4 class="subject font_w_font_s1">LangChain</h4>
+                        </div>
+                        <div class="skill_circle fade_up">
+                            <div class="hard_skill_group">
+                                <img class="figma" src="https://cdn.simpleicons.org/wordpress/21759B" alt="wordpress">
+                            </div>
+                            <h4 class="subject font_w_font_s1">WordPress</h4>
+                        </div>
+                        <div class="skill_circle fade_up">
+                            <div class="hard_skill_group">
+                                <img class="figma" src="https://cdn.simpleicons.org/github/181717" alt="github">
+                            </div>
+                            <h4 class="subject font_w_font_s1">GitHub</h4>
+                        </div>
+                    </div>
+                </section>
+                <!-- ======================================= Skills Section End ================================== -->
+
+
+                <!-- ======================================= Contact Section ================================== -->
+                <section class="oliva-intro tabcontent" id="contact">
+                    <div class="intro_main">
+                        <h2 class="intro fade_up">contact</h2>
+                    </div>
+                    <h2 class="moswa fade_up">Let's Work Together!</h2>
+                    <form id="contact-form" class="contact_form" action="https://formspree.io/f/xojnnklq" method="POST">
+                        <div class="container1">
+                            <div class="form form__1">
+                                <label for="name" class="form__label">What is your name?*</label>
+                                <input type="text" class="form__input" id="name" name="name" required autocomplete="off">
+                            </div>
+                            <div class="form form__2">
+                                <label for="email" class="form__label">Your email*</label>
+                                <input type="email" class="form__input" id="email" name="email" required autocomplete="off">
+                            </div>
+                            <div class="form form__1">
+                                <label for="phone" class="form__label">Your phone number*</label>
+                                <input type="text" class="form__input" id="phone" name="phone" required autocomplete="off">
+                            </div>
+                            <div class="form form__1">
+                                <label for="subject" class="form__label">Subject*</label>
+                                <input type="text" class="form__input" id="subject" name="subject" required autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="btn_message">
+                            <div class="form form__3">
+                                <label for="project" class="form__label">Tell me about your project*</label>
+                                <input type="text" class="form__input message2" id="project" name="project" required>
+                            </div>
+                            <div class="send_message_form">
+                                <button type="submit" class="download_cv form__btn">
+                                    <i class="fa-regular fa-paper-plane material-icons"></i>Send Message
+                                </button>
+                            </div>
+                        </div>
+                        <p class="form_status" id="form-status" aria-live="polite"></p>
+                    </form>
+
+                    <div>
+                        <h3 class="moswa touch">Get in touch!</h3>
+                        <div class="contact_number_main">
+                            <img src="../assets/images/contact.svg" alt="contact">
+                            <h4 class="contact_number"><a href="tel:+33651913465">+33 6 51 91 34 65</a></h4>
+                        </div>
+                        <div class="contact_number_main">
+                            <img src="../assets/images/gmail.svg" alt="gmail">
+                            <h4 class="contact_number"><a href="mailto:yanis@el-yassiri.com">yanis@el-yassiri.com</a></h4>
+                        </div>
+                        <div class="contact_number_main">
+                            <img src="../assets/images/map.svg" alt="map">
+                            <h4 class="contact_number"><a href="javascript:void(0)">Paris, France (Wish to relocate in Malaysia)</a></h4>
+                        </div>
+                    </div>
+
+                </section>
+                <!-- ======================================= Contact Section End ================================== -->
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ======================================= Portfolio Project Popups ================================== -->
+    <div class="overlay project-overlay" id="project-yoovi-modal" aria-hidden="true">
+        <div class="content2 project-modal-content" role="dialog" aria-modal="true" aria-labelledby="project-yoovi-title">
+            <button type="button" class="project-modal-close" aria-label="Close project details">
+                <i class="ri-close-line"></i>
+            </button>
+            <div class="project-modal-carousel">
+                <img class="project-modal-image" src="../assets/images/projects/yoovi/carousel/yoovi-01.png" alt="Yoovi screenshot 1">
+                <img class="project-modal-image" src="../assets/images/projects/yoovi/carousel/yoovi-02.png" alt="Yoovi screenshot 2">
+                <img class="project-modal-image" src="../assets/images/projects/yoovi/carousel/yoovi-03.png" alt="Yoovi screenshot 3">
+                <img class="project-modal-image" src="../assets/images/Yoovi/screenshare.png" alt="Yoovi screenshare">
+                <img class="project-modal-image" src="../assets/images/projects/yoovi/carousel/yoovi-05.png" alt="Yoovi screenshot 5">
+            </div>
+            <div class="corporate_main">
+                <h2 class="project_name font_w_font_s" id="project-yoovi-title">Yoovi</h2>
+                <p class="blandit_text corporate_sub">
+                    Yoovi is an AI-powered educational platform for French middle and high school students (grades 6
+                    through Terminale), built in direct collaboration with the French Ministry of Education and already
+                    being deployed in schools across France.
+                </p>
+                <p class="blandit_text project-modal-copy">
+                    - 24/7 intelligent tutoring assistant built around subject-specific Virtual Rooms.<br>
+                    - Students can chat with AI, generate flashcards, quizzes and revision sheets, take notes, and
+                    complete exercises by subject and chapter.<br>
+                    - Multimodal input: text, audio, images, and PDFs, plus real-time screen sharing with live AI
+                    assistance and voice calls with the AI.<br>
+                    - Includes a parent monitoring dashboard and a career guidance module.<br>
+                    - Freemium model: free access for all students, with advanced features in 3 paid tiers (monthly or annual).<br>
+                    - Positioned as an ethics-first learning companion, not a cheating tool, to democratize quality
+                    academic support and reduce educational inequality across France.
+                </p>
+                <div class="cuberto_main">
+                    <p class="created_by">Created By:</p>
+                    <p class="cuberto">Yanis El Yassiri</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Date:</p>
+                    <p class="cuberto">2023 - Present</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Client:</p>
+                    <p class="cuberto">French Schools (Ministry Collaboration)</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Categories:</p>
+                    <p class="cuberto">EdTech, AI Tutoring, Freemium SaaS</p>
+                </div>
+            </div>
+            <div class="project-modal-video-grid">
+                <iframe class="pop-up-video" src="https://www.youtube.com/embed/TZQEF7v4ofs" title="Yoovi video 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe class="pop-up-video" src="https://www.youtube.com/embed/M6DY0Stnmnw" title="Yoovi video 2" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <a class="project-website-btn font_w_font_s" href="https://yoovi.fr" target="_blank" rel="noopener noreferrer">Visit the website</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay project-overlay" id="project-leadem-modal" aria-hidden="true">
+        <div class="content2 project-modal-content no-video-modal" role="dialog" aria-modal="true" aria-labelledby="project-leadem-title">
+            <button type="button" class="project-modal-close" aria-label="Close project details">
+                <i class="ri-close-line"></i>
+            </button>
+            <div class="project-modal-carousel">
+                <img class="project-modal-image" src="../assets/images/projects/leadem/carousel/leadem-01.png" alt="Lead'Em screenshot 1">
+                <img class="project-modal-image" src="../assets/images/projects/leadem/carousel/leadem-02.png" alt="Lead'Em screenshot 2">
+                <img class="project-modal-image" src="../assets/images/projects/leadem/carousel/leadem-03.png" alt="Lead'Em screenshot 3">
+                <img class="project-modal-image" src="../assets/images/projects/leadem/carousel/leadem-04.png" alt="Lead'Em screenshot 4">
+                <img class="project-modal-image" src="../assets/images/projects/leadem/carousel/leadem-05.png" alt="Lead'Em screenshot 5">
+            </div>
+            <div class="project-modal-audio">
+                <audio controls preload="metadata">
+                    <source src="../assets/audio/leadem/leadem-call.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="blandit_text">AI phone call recording (Lead'Em demo).</p>
+            </div>
+            <div class="corporate_main">
+                <h2 class="project_name font_w_font_s" id="project-leadem-title">Lead'Em</h2>
+                <p class="blandit_text corporate_sub">
+                    Lead'Em is an AI-powered phone prospecting system that qualifies leads, handles objections, and
+                    books qualified prospects into scheduled sales calls.
+                </p>
+                <p class="blandit_text project-modal-copy">
+                    The AI agent can run end-to-end call flows, secure appointment slots, create events directly in
+                    Google Calendar, and transfer calls to a human closer when needed. Built for high-volume outbound
+                    operations, it improves response speed, consistency, and conversion readiness while reducing manual
+                    prospecting workload.
+                </p>
+                <div class="cuberto_main">
+                    <p class="created_by">Created By:</p>
+                    <p class="cuberto">Yanis El Yassiri</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Date:</p>
+                    <p class="cuberto">Late 2024 - Early 2025</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Client:</p>
+                    <p class="cuberto">Confidential</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Categories:</p>
+                    <p class="cuberto">AI Voice Agent, Sales Prospecting Automation, Appointment Booking</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay project-overlay" id="project-nefsy-modal" aria-hidden="true">
+        <div class="content2 project-modal-content no-video-modal" role="dialog" aria-modal="true" aria-labelledby="project-nefsy-title">
+            <button type="button" class="project-modal-close" aria-label="Close project details">
+                <i class="ri-close-line"></i>
+            </button>
+            <div class="project-modal-carousel">
+                <img class="project-modal-image" src="../assets/images/projects/nefsy/carousel/nefsy-01.png" alt="Nefsy screenshot 1">
+                <img class="project-modal-image" src="../assets/images/projects/nefsy/carousel/nefsy-02.png" alt="Nefsy screenshot 2">
+            </div>
+            <div class="corporate_main">
+                <h2 class="project_name font_w_font_s" id="project-nefsy-title">Nefsy</h2>
+                <p class="blandit_text corporate_sub">
+                    Nefsy is a matchmaking platform that connects pilgrims with trusted local guides in Mecca and
+                    Medina for guided visits and Umrah support.
+                </p>
+                <p class="blandit_text project-modal-copy">
+                    The product is designed to simplify guide discovery, booking coordination, and communication for
+                    pilgrims looking for structured, reliable assistance during their religious journey. It also
+                    includes a full admin panel to manage and control the entire application.
+                </p>
+                <div class="cuberto_main">
+                    <p class="created_by">Created By:</p>
+                    <p class="cuberto">Yanis El Yassiri</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Date:</p>
+                    <p class="cuberto">Late 2025 - Early 2026</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Client:</p>
+                    <p class="cuberto">Nefsy</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Categories:</p>
+                    <p class="cuberto">Pilgrimage Services, Guide Matching, Marketplace App</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay project-overlay" id="project-childs-kitchen-modal" aria-hidden="true">
+        <div class="content2 project-modal-content no-video-modal" role="dialog" aria-modal="true" aria-labelledby="project-childs-kitchen-title">
+            <button type="button" class="project-modal-close" aria-label="Close project details">
+                <i class="ri-close-line"></i>
+            </button>
+            <div class="project-modal-carousel">
+                <img class="project-modal-image" src="../assets/images/projects/childs-kitchen/carousel/childs-kitchen-01.png" alt="Child's Kitchen screenshot 1">
+                <img class="project-modal-image" src="../assets/images/projects/childs-kitchen/carousel/childs-kitchen-02.png" alt="Child's Kitchen screenshot 2">
+            </div>
+            <div class="corporate_main">
+                <h2 class="project_name font_w_font_s" id="project-childs-kitchen-title">Child's Kitchen</h2>
+                <p class="blandit_text corporate_sub">
+                    Child's Kitchen is a school catering platform that connects parents, meal suppliers, and schools
+                    in one synchronized system for child menu management.
+                </p>
+                <p class="blandit_text project-modal-copy">
+                    Parents can reserve and pay for their child's weekly menus directly in the app. Suppliers get a
+                    clear daily production view of all meals to prepare, and schools can identify which menu must be
+                    distributed to each student. The platform provides dedicated access for parents, suppliers, and
+                    schools to automate the full workflow end-to-end, and it is deployed for schools in Morocco.
+                </p>
+                <div class="cuberto_main">
+                    <p class="created_by">Created By:</p>
+                    <p class="cuberto">Yanis El Yassiri</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Date:</p>
+                    <p class="cuberto">Late 2025</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Client:</p>
+                    <p class="cuberto">Child's Kitchen</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Categories:</p>
+                    <p class="cuberto">School Catering, Workflow Automation, Multi-Role Application</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay project-overlay" id="project-jedeeshop-modal" aria-hidden="true">
+        <div class="content2 project-modal-content" role="dialog" aria-modal="true" aria-labelledby="project-jedeeshop-title">
+            <button type="button" class="project-modal-close" aria-label="Close project details">
+                <i class="ri-close-line"></i>
+            </button>
+            <div class="project-modal-carousel">
+                <img class="project-modal-image" src="../assets/images/projects/jedeeshop/cover.webp" alt="Jedeeshop cover">
+                <img class="project-modal-image" src="../assets/images/projects/jedeeshop/gallery/jedee1.webp" alt="Jedeeshop screen 1">
+                <img class="project-modal-image" src="../assets/images/projects/jedeeshop/gallery/jedee2.webp" alt="Jedeeshop screen 2">
+                <img class="project-modal-image" src="../assets/images/projects/jedeeshop/gallery/jedee3.webp" alt="Jedeeshop screen 3">
+            </div>
+            <div class="corporate_main">
+                <h2 class="project_name font_w_font_s" id="project-jedeeshop-title">Jedeeshop</h2>
+                <p class="blandit_text corporate_sub">
+                    Jedeeshop is a high-performing e-commerce brand focused on projector sales and generating several
+                    million euros in annual revenue.
+                </p>
+                <div class="cuberto_main">
+                    <p class="created_by">Created By:</p>
+                    <p class="cuberto">Yanis El Yassiri</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Date:</p>
+                    <p class="cuberto">2024</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Client:</p>
+                    <p class="cuberto">Jedeeshop Founder</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Categories:</p>
+                    <p class="cuberto">E-commerce, Conversion Concept, Web Product</p>
+                </div>
+                <p class="blandit_text project-modal-copy">
+                    This page was designed as a concept proposal for the brand founder to explore a stronger
+                    e-commerce direction and higher-conversion product presentation. The concept opened the way to a
+                    direct collaboration with the brand.
+                </p>
+            </div>
+            <div class="project-modal-video-grid">
+                <iframe class="pop-up-video" src="https://www.youtube.com/embed/q8HEBOndiis" title="Jedeeshop video 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay project-overlay" id="project-awa-plaisir-modal" aria-hidden="true">
+        <div class="content2 project-modal-content awa-plaisir-modal" role="dialog" aria-modal="true" aria-labelledby="project-awa-plaisir-title">
+            <button type="button" class="project-modal-close" aria-label="Close project details">
+                <i class="ri-close-line"></i>
+            </button>
+            <div class="project-modal-carousel">
+                <img class="project-modal-image" src="../assets/images/projects/awa-plaisir/cover.webp" alt="Awa Plaisir cover">
+                <img class="project-modal-image" src="../assets/images/projects/awa-plaisir/gallery/ap1.png" alt="Awa Plaisir product preview">
+            </div>
+            <div class="corporate_main">
+                <h2 class="project_name font_w_font_s" id="project-awa-plaisir-title">Awa Plaisir</h2>
+                <p class="blandit_text corporate_sub">
+                    Awa Plaisir is a furniture e-commerce platform built for online ordering, premium product
+                    presentation, and a modern, animation-driven shopping experience.
+                </p>
+                <div class="cuberto_main">
+                    <p class="created_by">Created By:</p>
+                    <p class="cuberto">Yanis El Yassiri</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Date:</p>
+                    <p class="cuberto">2024</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Client:</p>
+                    <p class="cuberto">Awa Plaisir</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Categories:</p>
+                    <p class="cuberto">Furniture E-commerce, 3D Rendering, AR Visualization, Delivery Operations</p>
+                </div>
+                <p class="blandit_text project-modal-copy">
+                    The project includes advanced UI motion design, 3D product rendering, and augmented reality so
+                    customers can place furniture at true scale in their own home before purchase. On the operations
+                    side, I implemented a complete delivery management stack with a dedicated courier app to dispatch
+                    orders, manage in-house drivers, and track live courier positions. Customers receive a live
+                    tracking URL by message to follow delivery progress in real time.
+                </p>
+            </div>
+            <div class="project-modal-video-top">
+                <iframe class="pop-up-video" src="https://www.youtube.com/embed/ssCH94I5GS8" title="Awa Plaisir video 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="project-modal-video-grid">
+                <iframe class="pop-up-video" src="https://www.youtube.com/embed/oKGH4UzpxSQ" title="Awa Plaisir video 2" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <video class="project-local-video project-local-video-portrait" controls preload="metadata">
+                    <source src="../assets/video/awa-plaisir/3d-awaplaisir.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay project-overlay" id="project-kovering-agency-modal" aria-hidden="true">
+        <div class="content2 project-modal-content" role="dialog" aria-modal="true" aria-labelledby="project-kovering-agency-title">
+            <button type="button" class="project-modal-close" aria-label="Close project details">
+                <i class="ri-close-line"></i>
+            </button>
+            <div class="project-modal-carousel">
+                <img class="project-modal-image" src="../assets/images/projects/kovering-agency/cover.webp" alt="Kovering Agency cover">
+                <img class="project-modal-image" src="../assets/images/projects/kovering-agency/gallery/kovering1.webp" alt="Kovering Agency screen 1">
+                <img class="project-modal-image" src="../assets/images/projects/kovering-agency/gallery/kovering2.webp" alt="Kovering Agency screen 2">
+                <img class="project-modal-image" src="../assets/images/projects/kovering-agency/gallery/kovering3.webp" alt="Kovering Agency screen 3">
+            </div>
+            <div class="corporate_main">
+                <h2 class="project_name font_w_font_s" id="project-kovering-agency-title">Kovering Agency</h2>
+                <p class="blandit_text corporate_sub">
+                    Kovering Agency is a web platform for a UGC-focused content agency helping e-commerce brands
+                    produce high-converting creative assets.
+                </p>
+                <div class="cuberto_main">
+                    <p class="created_by">Created By:</p>
+                    <p class="cuberto">Yanis El Yassiri</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Date:</p>
+                    <p class="cuberto">2024</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Client:</p>
+                    <p class="cuberto">Jedeeshop Founder (Kovering Agency)</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Categories:</p>
+                    <p class="cuberto">UGC Content Agency, Appointment Booking, E-commerce Packs</p>
+                </div>
+                <p class="blandit_text project-modal-copy">
+                    The website was designed with a premium, animation-heavy experience and includes both service
+                    booking and direct sales flows. Users can schedule phone appointments and purchase UGC creative
+                    packs through an integrated e-commerce section. This project was delivered as part of my
+                    collaboration with Jedeeshop, since it was one of the founder's parallel initiatives.
+                </p>
+            </div>
+            <div class="project-modal-video-grid">
+                <iframe class="pop-up-video" src="https://www.youtube.com/embed/5vAQzEJb5CA" title="Kovering Agency video 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay project-overlay" id="project-chicken-maestro-modal" aria-hidden="true">
+        <div class="content2 project-modal-content" role="dialog" aria-modal="true" aria-labelledby="project-chicken-maestro-title">
+            <button type="button" class="project-modal-close" aria-label="Close project details">
+                <i class="ri-close-line"></i>
+            </button>
+            <div class="project-modal-carousel">
+                <img class="project-modal-image" src="../assets/images/projects/chicken-maestro/cover.webp" alt="Chicken Maestro cover">
+                <img class="project-modal-image" src="../assets/images/projects/chicken-maestro/gallery/chicken1.webp" alt="Chicken Maestro screen 1">
+                <img class="project-modal-image" src="../assets/images/projects/chicken-maestro/gallery/chicken2.webp" alt="Chicken Maestro screen 2">
+                <img class="project-modal-image" src="../assets/images/projects/chicken-maestro/gallery/chicken3.webp" alt="Chicken Maestro screen 3">
+            </div>
+            <div class="corporate_main">
+                <h2 class="project_name font_w_font_s" id="project-chicken-maestro-title">Chicken Maestro</h2>
+                <p class="blandit_text corporate_sub">
+                    Chicken Maestro is an online ordering platform built for a fast-food restaurant, with a complete
+                    in-house delivery workflow.
+                </p>
+                <div class="cuberto_main">
+                    <p class="created_by">Created By:</p>
+                    <p class="cuberto">Yanis El Yassiri</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Date:</p>
+                    <p class="cuberto">2023</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Client:</p>
+                    <p class="cuberto">Chicken Maestro</p>
+                </div>
+                <div class="cuberto_main">
+                    <p class="created_by">Categories:</p>
+                    <p class="cuberto">Restaurant Ordering, White-Label Delivery, Courier Operations</p>
+                </div>
+                <p class="blandit_text project-modal-copy">
+                    The system includes customer ordering, dispatch tools, and a dedicated delivery module to manage
+                    the restaurant's own drivers, assign deliveries, and track courier positions in real time.
+                    Customers receive a live tracking link for their order, similar to major delivery apps. The core
+                    goal was to move away from third-party marketplaces like Uber Eats (comparable to Grab's model),
+                    reduce commission costs, and offer lower final prices to customers through a fully owned delivery
+                    stack.
+                </p>
+            </div>
+            <div class="project-modal-video-grid">
+                <iframe class="pop-up-video" src="https://www.youtube.com/embed/f5ONkynDMbM" title="Chicken Maestro video 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- ======================================= Portfolio Project Popups End ================================== -->
+
+    <script src="../assets/javascript/jquery.min.js"></script>
+    <script src="../assets/javascript/magnific-popup.min.js"></script>
+    <script src="../assets/javascript/progresscircle.js"></script>
+    <script src="../assets/javascript/cursor.js"></script>
+    <script src="../assets/javascript/bootstrap.bundle.min.js"></script>
+    <script src="../assets/javascript/slick.min.js"></script>
+    <script src="../assets/javascript/ring_animation/ring_bg_animation.js"></script>
+    <script src="../assets/javascript/script.js"></script>
+</body>
+
+</html>
